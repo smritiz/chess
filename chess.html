@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chess Board Design</title>
+ 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+ 
+        .chessboard_div {
+            display: inline-block;
+            width: 830px;
+            height: 810px;
+            border: 10px solid #000;;
+        }
+        .black_background {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: #000000;;
+            line-height: 100px;
+        }
+        .white_background {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: #fff;
+                line-height: 100px;
+        }
+    </style>
+</head>
+<script>
+function highlight(){
+
+    
+var table = document.getElementById('table');
+console.log(table);
+var cells = table.getElementsByTagName("td");
+var tableRow = table.getElementsByTagName("tr");
+console.log(cells);
+var rowIndex = this.parentNode.rowIndex + 1;
+  console.log(rowIndex, "rowIndex");
+for(var j = 1; j < cells.length; j++){
+var cell = cells[j];
+//     // Track with onclick
+  cell.onclick = function(){ 
+      console.log(cell, "cell");
+      this.origColor=this.style.backgroundColor;
+    this.style.backgroundColor='red';
+  }
+}
+
+
+
+
+
+
+
+
+//  var table = document.getElementById('table');
+// var cells = table.getElementsByTagName("td");
+//  for (var i=0;i < table.rows.length;i++){
+//   table.rows[i].onclick= function () {
+//    if(!this.hilite){
+//     this.origColor=this.style.backgroundColor;
+//     this.style.backgroundColor='navy';
+//     this.hilite = true;
+//    }
+//    else{
+//     this.style.backgroundColor=this.origColor;
+//     this.hilite = false;
+//    }
+//     }
+//  }
+// for(var i = 1; i < cells.length; i++){
+//     // Cell Object
+//     var cell = cells[i];
+//     // Track with onclick
+//     cell.onclick = function(){
+//     var cellIndex  = this.cellIndex + 1; 
+//     console.log(cellIndex, "CI");
+
+//     var rowIndex = this.parentNode.rowIndex + 1;
+//     console.log(rowIndex, "rowIndex");
+//     if(rowIndex ==2 && cellIndex ==1)
+//     {
+//         this.style.background == "navy"
+//     }
+//     }
+   
+// }
+
+
+
+
+ }
+
+</script>
+ 
+<body>
+    <div>
+    <table class="chessboard_div" id="table">
+		<tr>
+        <td><div class="white_background" onclick="highlight()"></div></td>
+        <td><div class="black_background"></div></td>
+        <td><div class="white_background"></div></td>
+        <td><div class="black_background"></div></td>
+         <td><div class="white_background"></div></td>
+        <td><div class="black_background"></div></td>
+        <td><div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+		</tr>
+ 
+	 <tr>
+<td>        <div class="black_background"></div></td>
+    <td>    <div class="white_background"></div></td>
+        <td><div class="black_background"></div></td>
+        <td><div class="white_background"></div></td>
+        <td><div class="black_background"></div></td>
+        <td><div class="white_background"></div></td>
+        <td><div class="black_background"></div></td>
+        <td><div class="white_background"></div></td>
+		</tr>
+ 	
+		<tr>
+        <td><div class="white_background"></div></td>
+        <td><div class="black_background"></div></td>
+        <td><div class="white_background"></div></td>
+        <td><div class="black_background"></div></td>
+        <td><div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+      <td>  <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+		</tr>
+
+		<tr>
+       <td> <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+	   </tr>
+ 
+		<tr>
+       <td> <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+	   </tr>
+ 
+		<tr>
+       <td> <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+      <td>  <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+      <td>  <div class="white_background"></div></td>
+      <td>  <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+	   </tr>
+ 
+		<tr>
+      <td>  <div class="white_background"></div></td>
+      <td>  <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+       <td> <div class="black_background"></div></td>
+       <td> <div class="white_background"></div></td>
+      <td>  <div class="black_background"></div></td>
+      <td>  <div class="white_background"></div></td>
+      <td>  <div class="black_background"></div></td>
+	  </tr>
+ 
+		<tr>
+      <td>  <div class="black_background"></div></td>
+      <td>  <div class="white_background"></div></td>
+      <td>  <div class="black_background"></div></td>
+      <td>  <div class="white_background"></div></td>
+      <td>  <div class="black_background"></div></td>
+      <td>  <div class="white_background"></div></td>
+      <td>  <div class="black_background"></div></td>
+      <td>  <div class="white_background"></div></td>
+    </div>
+	</tr> 
+	</table>
+</body>
+</html>`
